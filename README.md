@@ -2,9 +2,7 @@
 
 File operations.
 
-## How to use
-
-### Install
+## Install
 
 Install from this repository:
 
@@ -12,26 +10,36 @@ Install from this repository:
 
 2. install the paclet:
 
-    ``` 
-    PacletInstall@File["the/path/of/paclet"];
+    ``` wl
+    PacletInstall@File["the/path/of/paclet"]
     ```
 
-Load the package(s):
+Install manually:
 
-``` 
-Needs["Lacia`File`"];
+1. download this repository;
+
+2. move it to the paclet directory:
+
+    ``` wl
+    $UserBasePacletsDirectory
+    ```
+
+## Load
+
+``` wl
+Needs["Lacia`File`"]
 ```
 
-### Upgrade
+## Upgrade
 
-```
-PacletInstall["Lacia/File"];
-```
-
-### Uninstall
-
-```
-PacletUninstall["Lacia/File"];
+``` wl
+PacletInstall["Lacia/File"]
 ```
 
-### Documentation
+## Uninstall
+
+``` wl
+PacletUninstall["Lacia/File"]
+```
+
+## Documentation
