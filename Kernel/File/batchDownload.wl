@@ -34,17 +34,18 @@ Begin["`Private`"];
 
 
 batchDownload[urlTemplate_String,fileNameTemplate_String,range_List,pause_:0.5] :=
-    Module[ {i},
+    Module[ {element,counter=0},
         Monitor[
             Do[
                 Pause[pause];
+                counter=counter+1;
                 URLDownload[
-                    StringTemplate[urlTemplate][i],
-                    FileNameJoin@{$HomeDirectory,"Downloads",StringTemplate[fileNameTemplate][i]}
+                    StringTemplate[urlTemplate][element],
+                    FileNameJoin@{$HomeDirectory,"Downloads",StringTemplate[fileNameTemplate][element]}
                 ],
-                {i,range}
+                {element,range}
             ],
-            ProgressIndicator[i,{0,Length@range}]
+            ProgressIndicator[counter,{0,Length@range}]
         ]
     ];
 
