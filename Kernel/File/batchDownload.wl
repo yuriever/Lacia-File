@@ -34,11 +34,11 @@ Begin["`Private`"];
 
 
 batchDownload[urlTemplate_String,fileNameTemplate_String,range_List,pause_:0.5] :=
-    Module[ {element,counter=0},
+    Module[ {element,counter = 0},
         Monitor[
             Do[
                 Pause[pause];
-                counter=counter+1;
+                counter = counter+1;
                 URLDownload[
                     StringTemplate[urlTemplate][element],
                     FileNameJoin@{$HomeDirectory,"Downloads",StringTemplate[fileNameTemplate][element]}
