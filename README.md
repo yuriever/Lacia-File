@@ -1,6 +1,6 @@
-# Lacia
+# Lacia/File
 
-Paclet template.
+File operations.
 
 ## How to use
 
@@ -19,19 +19,19 @@ Install from this repository:
 Load the package(s):
 
 ``` 
-Needs["Lacia`Init`"];
+Needs["Lacia`File`"];
 ```
 
 ### Upgrade
 
 ```
-PacletInstall["Lacia"];
+PacletInstall["Lacia/File"];
 ```
 
 ### Uninstall
 
 ```
-PacletUninstall["Lacia"];
+PacletUninstall["Lacia/File"];
 ```
 
 ### Documentation
