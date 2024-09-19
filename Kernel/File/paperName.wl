@@ -95,7 +95,10 @@ paperNameQ[str_String,opts:OptionsPattern[]] :=
     ];
 
 
-paperNameRename[dir_?DirectoryQ] :=
+paperNameRename//Options =
+    {"OnlyShowRenamedPaper"->True};
+
+paperNameRename[dir_?DirectoryQ,opts:OptionsPattern[]] :=
     Module[ {paperData,paperWithoutAuthor,res},
         paperData =
             findInFolder[file__/;DirectoryQ[file]||StringMatchQ[file,__~~".pdf"|".djvu"]]@dir;
@@ -115,9 +118,20 @@ paperNameRename[dir_?DirectoryQ] :=
                         <|"IsRenamed"->(#FileName=!=#NewName),#|>
                     )&]//
 						Query[ReverseSortBy[#IsRenamed&]];
+        If[ OptionValue["OnlyShowRenamedPaper"]===True,
+            res = res//Query[Select[#IsRenamed===True&]]
+        ];
         CellPrint@{
-            ExpressionCell[paperWithoutAuthor//Dataset,"Output"],
-            ExpressionCell[res//Dataset,"Output"]
+            If[ paperWithoutAuthor=!={},
+                ExpressionCell[paperWithoutAuthor//Dataset,"Output"],
+                (*Else*)
+                Nothing
+            ],
+            If[ res=!={},
+                ExpressionCell[res//Dataset,"Output"],
+                (*Else*)
+                Nothing
+            ]
         }
     ];
 
