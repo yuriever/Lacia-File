@@ -1,3 +1,8 @@
+<!-- batchCopy.wl -->
+
+* `#!wl batchCopy` - batch copy from file list.
+
+
 <!-- batchDownload.wl -->
 
 * `#!wl batchDownload` - batch download from url template.

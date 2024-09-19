@@ -23,6 +23,7 @@
 	"EFTs",
 	"EFT",
 	"Gauge_Gravity",
+	"Jackiw-Teitelboim",
 	"LCFT",
 	"LHC",
 	"MHV",
@@ -45,5 +46,7 @@
 	"WZW",
 	"YBE",
 	"YB",
-	"Knizhnik-Zamolodchikov"
+	"Knizhnik-Zamolodchikov",
+	"vs.",
+	"Stiefel-Whitney"
 ]

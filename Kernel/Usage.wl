@@ -1,3 +1,9 @@
+(* batchCopy.wl *)
+
+batchCopy::usage =
+	"batch copy from file list.";
+
+
 (* batchDownload.wl *)
 
 batchDownload::usage =
