@@ -3,7 +3,7 @@
 PacletObject[
   <|
     "Name" -> "Lacia/File",
-    "Description" -> "File operations",
+    "Description" -> "File operation",
     "Creator" -> "Yurie",
     "License" -> "MIT",
     "PublisherID" -> "Yurie",

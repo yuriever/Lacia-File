@@ -1,6 +1,8 @@
 # Lacia/File
 
-File operations.
+File operation.
+
+## Documentation
 
 ## Install
 
@@ -41,5 +43,3 @@ PacletInstall["Lacia/File"]
 ``` wl
 PacletUninstall["Lacia/File"]
 ```
-
-## Documentation
