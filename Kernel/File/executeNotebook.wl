@@ -41,7 +41,7 @@ executeNotebook[nbPath_,opts:OptionsPattern[]] :=
         nb =
             NotebookOpen[
                 nbPath,
-                FilterRules[{opts},Options[NotebookOpen]]
+                FilterRules[{opts,Options@executeNotebook},Options@NotebookOpen]
             ];
         FrontEndExecute@FrontEndToken[nb,"SelectAll"];
         FrontEndExecute@FrontEndToken[nb,"Evaluate"];

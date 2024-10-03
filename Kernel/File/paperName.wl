@@ -71,7 +71,7 @@ paperName//Attributes =
 paperName//Options =
     {"IncludePreprint"->True};
 
-paperName[str_String,opts:OptionsPattern[]] :=
+paperName[str_String,OptionsPattern[]] :=
     Module[ {name},
         name =
             str//StringTrim//replaceSpecialCharacter//regulateTitleAndAuthor[OptionValue["IncludePreprint"]]//
@@ -84,7 +84,7 @@ paperName[str_String,opts:OptionsPattern[]] :=
 paperNameQ//Options =
     {"IncludePreprint"->True};
 
-paperNameQ[str_String,opts:OptionsPattern[]] :=
+paperNameQ[str_String,OptionsPattern[]] :=
     Switch[ OptionValue["IncludePreprint"],
         True,
             StringMatchQ[str,$paperNamePattern["TagTitleAuthor"]],
@@ -98,7 +98,7 @@ paperNameQ[str_String,opts:OptionsPattern[]] :=
 paperNameRename//Options =
     {"OnlyShowRenamedPaper"->True};
 
-paperNameRename[dir_?DirectoryQ,opts:OptionsPattern[]] :=
+paperNameRename[dir_?DirectoryQ,OptionsPattern[]] :=
     Module[ {paperData,paperWithoutAuthor,res},
         paperData =
             findInFolder[file__/;DirectoryQ[file]||StringMatchQ[file,__~~".pdf"|".djvu"]]@dir;
