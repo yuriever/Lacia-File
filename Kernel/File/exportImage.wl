@@ -70,8 +70,8 @@ exportSVG["SVG",imagePath_,image_,opts:OptionsPattern[]] :=
 
 removeSizeInfoInSVGString[string_] :=
     string//StringSplit[#,"\n",3]&//
-		MapAt[removeSizeInfoInString,2]//
-			StringRiffle[#,"\n"]&;
+        MapAt[removeSizeInfoInString,2]//
+            StringRiffle[#,"\n"]&;
 
 
 removeSizeInfoInString[string_] :=

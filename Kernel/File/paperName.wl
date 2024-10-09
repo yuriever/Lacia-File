@@ -58,7 +58,7 @@ $paperNameRule =
 
 $specialWordRuleList =
     FileNameJoin@{$thisSourceDir,"paperNameSpecialWordList.json"}//Import[#,"Data"]&//
-		Map[{" "<>#<>" "->" "<>#<>" "," "<>#<>","->" "<>#<>","}&]//Flatten;
+        Map[{" "<>#<>" "->" "<>#<>" "," "<>#<>","->" "<>#<>","}&]//Flatten;
 
 
 (* ::Subsection:: *)
@@ -75,7 +75,7 @@ paperName[str_String,OptionsPattern[]] :=
     Module[ {name},
         name =
             str//StringTrim//replaceSpecialCharacter//regulateTitleAndAuthor[OptionValue["IncludePreprint"]]//
-    			correctSpecialWord//RemoveDiacritics//StringTrim;
+                correctSpecialWord//RemoveDiacritics//StringTrim;
         name//CopyToClipboard;
         name
     ];
@@ -110,14 +110,14 @@ paperNameRename[dir_?DirectoryQ,OptionsPattern[]] :=
             ]];
         res =
             paperData//Query[Select[paperNameQ[#FileName,"IncludePreprint"->False]&]]//
-				Query[All,<|"NewName"->paperName[#FileName],#|>&]//
-					Query[All,(
+                Query[All,<|"NewName"->paperName[#FileName],#|>&]//
+                    Query[All,(
                         If[ #FileName=!=#NewName,
                             RenameFile[#File,FileNameJoin@{#Directory[[1]],#NewName<>fileExtensionWithDot[#File]}]
                         ];
                         <|"IsRenamed"->(#FileName=!=#NewName),#|>
                     )&]//
-						Query[ReverseSortBy[#IsRenamed&]];
+                        Query[ReverseSortBy[#IsRenamed&]];
         If[ OptionValue["OnlyShowRenamedPaper"]===True,
             res = res//Query[Select[#IsRenamed===True&]]
         ];

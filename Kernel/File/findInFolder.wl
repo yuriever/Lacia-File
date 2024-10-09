@@ -41,7 +41,7 @@ findInFolder//Attributes =
 
 findInFolder[stringPattern_:All,depth_:{1},opts:OptionsPattern[]][dir_?DirectoryQ] :=
     FileNames[stringPattern,dir,depth,FilterRules[{opts,Options@findInFolder},Options@FileNames]]//
-    	Map[<|
+        Map[<|
             "FileName"->FileBaseName[#],
             "File"->File[#],
             "Directory"->File@DirectoryName[#]
