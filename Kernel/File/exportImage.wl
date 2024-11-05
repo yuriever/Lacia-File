@@ -42,9 +42,9 @@ exportImage[imagePath_,opts:OptionsPattern[]][image_] :=
             First@FileNameToFormatList@imagePath;
         Switch[format,
             "SVG",
-                exportSVG["SVG",imagePath,image,opts],
+                exportSVG["SVG",imagePath,image,FilterRules[{opts,Options@exportImage},Options@exportSVG]],
             _,
-                Export[imagePath,image,format,opts]
+                Export[imagePath,image,format,FilterRules[{opts,Options@exportImage},Options@Export]]
         ]
     ];
 
@@ -56,7 +56,7 @@ exportImage[imagePath_,opts:OptionsPattern[]][image_] :=
 exportSVG["SVG",imagePath_,image_,opts:OptionsPattern[]] :=
     Module[ {imageString},
         imageString =
-            ExportString[image,"SVG",opts]//removeSizeInfoInSVGString;
+            ExportString[image,"SVG",FilterRules[{opts,Options@exportSVG},Options@ExportString]]//removeSizeInfoInSVGString;
         If[ !FileExistsQ@imagePath,
             CreateFile@imagePath
         ];
