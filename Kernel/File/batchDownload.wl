@@ -15,7 +15,7 @@ Needs["Lacia`File`"];
 
 
 batchDownload::usage =
-    "batch download from url template.";
+    "batch download from URL template.";
 
 
 (* ::Section:: *)

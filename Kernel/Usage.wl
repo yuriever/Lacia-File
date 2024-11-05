@@ -7,7 +7,7 @@ batchCopy::usage =
 (* batchDownload.wl *)
 
 batchDownload::usage =
-	"batch download from url template.";
+	"batch download from URL template.";
 
 
 (* executeNotebook.wl *)
@@ -19,7 +19,7 @@ executeNotebook::usage =
 (* exportImage.wl *)
 
 exportImage::usage =
-	"export images: SVG with adjustable size.";
+	"fix SVG issues.";
 
 
 (* findInFolder.wl *)

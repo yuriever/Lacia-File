@@ -15,7 +15,7 @@ Needs["Lacia`File`"];
 
 
 exportImage::usage =
-    "export images: SVG with adjustable size.";
+    "fix SVG issues.";
 
 
 (* ::Section:: *)

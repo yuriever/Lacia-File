@@ -5,7 +5,7 @@
 
 <!-- batchDownload.wl -->
 
-* `#!wl batchDownload` - batch download from url template.
+* `#!wl batchDownload` - batch download from URL template.
 
 
 <!-- executeNotebook.wl -->
@@ -15,7 +15,7 @@
 
 <!-- exportImage.wl -->
 
-* `#!wl exportImage` - export images: SVG with adjustable size.
+* `#!wl exportImage` - fix SVG issues.
 
 
 <!-- findInFolder.wl -->
