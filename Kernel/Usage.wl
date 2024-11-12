@@ -10,10 +10,10 @@ batchDownload::usage =
 	"batch download from URL template.";
 
 
-(* executeNotebook.wl *)
+(* batchOpenSaveNotebook.wl *)
 
-executeNotebook::usage =
-	"NotebookOpen + FrontEndExecute.";
+batchOpenSaveNotebook::usage =
+	"batch open and save notebooks.";
 
 
 (* exportImage.wl *)

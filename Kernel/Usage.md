@@ -8,9 +8,9 @@
 * `#!wl batchDownload` - batch download from URL template.
 
 
-<!-- executeNotebook.wl -->
+<!-- batchOpenSaveNotebook.wl -->
 
-* `#!wl executeNotebook` - NotebookOpen + FrontEndExecute.
+* `#!wl batchOpenSaveNotebook` - batch open and save notebooks.
 
 
 <!-- exportImage.wl -->

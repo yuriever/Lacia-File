@@ -14,6 +14,8 @@ Get["Lacia`File`batchCopy`"];
 
 Get["Lacia`File`batchDownload`"];
 
+Get["Lacia`File`batchOpenSaveNotebook`"];
+
 Get["Lacia`File`exportImage`"];
 
 Get["Lacia`File`findInFolder`"];
